@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+//Clearfix Class
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+body {
+  height: 100%;
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+  line-height: 1rem;
+  transition: opacity ease-in 0.2s;
+}
+
+header {
+  line-height: 1.5rem; //   padding: 0.5rem 0rem;
+  background: $nav-bgcolor;
+  z-index: 2;
+  width: 100%;
+  background: rgb(48, 48, 48);
+  -webkit-box-shadow: 0 0px 11px 0px #ddd;
+  -moz-box-shadow: 0 0px 11px 0px #ddd;
+  box-shadow: 0 0px 11px 0px #ddd;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 2rem;
+  font-weight: 400;
+
+  &.project-heading-lg {
+    font-size: 2.5rem;
+    line-height: 1.4;
+    color: #fff;
+  }
+
+  &.project-heading-sm {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #fff;
+  }
+
+  &.text-fade-up {
+    opacity: 0;
+    transition: transform 700ms ease, opacity 700ms ease;
+    transform: translateY(20px);
+  }
+
+  &.text-fade-up-end {
+    @include text-fadeup;
+  }
+}
+
+//Extra small
+@mixin screen-size-Xs {
+  @media screen and (max-width: 680px) {
+    @content;
+  }
+}
+
+//Small
+@mixin screen-size-Sm {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+//Medium
+@mixin screen-size-Md {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+//Large
+@mixin screen-size-Lg {
+  @media screen and (min-width: 1025px) and (max-width: 1600px) {
+    @content;
+  }
+}
+
+//Extra Large
+@mixin screen-size-Xl {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}

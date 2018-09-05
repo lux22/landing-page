@@ -1,0 +1,39 @@
+.project-btn {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    border-radius: 3px;
+}
+
+.project-btn-green {
+    @extend .project-btn;
+    background: $bg-color-green;
+    color: white;
+}
+
+.project-btn-purple {
+    @extend .project-btn;
+    background: $bg-color-purple;
+    color: white;
+}
+
+.project-btn-orange {
+    @extend .project-btn;
+    background: $bg-color-orange;
+    color: white;
+}
+
+.project-btn-teal {
+    @extend .project-btn;
+    background: $bg-color-teal;
+    color: white;
+}
+
+.project-btn-pink {
+    @extend .project-btn;
+    background: $bg-color-pink;
+    color: white;
+}
+
+.project-btn-md {
+    padding: 1.2rem 2.8rem;
+}

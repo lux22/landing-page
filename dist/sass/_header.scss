@@ -1,0 +1,100 @@
+.header-top-stripe {
+    text-align: center;
+    font-size: 0.8rem;
+    color: white;
+    background: $text-teal;
+    padding: 0.5rem 0.8rem;
+}
+
+.project-header {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .project-left-logo {
+        display: flex;
+        display: -ms-flexbox;
+        align-items: center;
+        position: absolute;
+        height: 100%;
+        margin: 0 42px 0 30px;
+        max-width: 125px;
+        -ms-flex-align: center;
+        @include easeout;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        .logo {
+            display: block;
+            font-weight: 600;
+            z-index: 2;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+
+    .project-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        transform: translateX(-20px);
+        height: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .project-authentication {
+        float: right;
+        display: flex;
+        height: 100%;
+        z-index: 2;
+        align-items: center;
+        margin: 0px 0px 0px 30px;
+        @include easeout;
+    }
+}
+
+.project-links {
+    &-link {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0rem 1.5rem;
+        text-transform: uppercase;
+        font-weight: 400;
+
+        a {
+            // color: linkcolor($nav-bgcolor);
+            font-size: 1.1rem;
+            z-index: 2;
+            @include easeout;
+
+            &:hover {
+                color: $link-color;
+            }
+        }
+    }
+}
+
+.project-authentication {
+    .project-signin {
+        padding: 0.9rem;
+        position: relative;
+        text-transform: uppercase;
+
+        a {
+            font-size: 1.1rem;
+            margin: 0 1rem;
+            z-index: 2;
+            font-weight: 400;
+        }
+
+        a:not(:last-child) {
+            color: $link-color;
+            font-weight: 500;
+        }
+    }
+}

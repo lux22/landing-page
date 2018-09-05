@@ -1,0 +1,11 @@
+{
+  "name": "climate-info",
+  "version": "1.0.0",
+  "description": "getting information on weather",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w dist/sass -o dist/css --recursive"
+  },
+  "author": "ax22",
+  "license": "ISC"
+}

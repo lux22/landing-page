@@ -1,0 +1,43 @@
+$nav-link: rgba(0, 0, 0, 0.54);
+$nav-link-color: #888b8d;
+//text-color
+$link-color: #0f9d58;
+$text-purple: #8e25aa;
+$text-pink: #e91e63;
+$text-orange: #ee8100;
+$text-teal: #00bcd4;
+$text-white: #fff;
+$text-ash: #fbfafb;
+//bg-color
+$nav-bgcolor: #fff;
+$bg-color-pink: #e91e63;
+$bg-color-green: #0f9d58;
+$bg-color-purple: #e91e63;
+$bg-color-orange: #ee8100;
+$bg-color-teal: #00bcd4;
+$bg-color-ash: #fbfafb;
+//@mixins
+@mixin easeout {
+  transition: all 0.5s ease-out;
+}
+
+@mixin text-fadeup {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@function linkcolor($bgcolor) {
+  @if (lightness($bgcolor) > 40) {
+    @return $nav-link-color;
+  } @else {
+    @return #fff;
+  }
+}
+
+@function buttonlink($bgcolor) {
+  @if (lightness($bgcolor) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
